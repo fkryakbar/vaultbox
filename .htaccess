@@ -1,0 +1,7 @@
+Options -Multiviews
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(.+)/$ /$1 [R=301,L]
+RewriteRule ^(.*)$ index.php?method=$1 [L]
